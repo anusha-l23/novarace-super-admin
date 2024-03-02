@@ -57,22 +57,37 @@ const {slug} = useParams();
   <BreadCrumb event={event} />
 
   <div className='d-flex flex-column flex-md-row justify-content-center gap-md-5 p-4'>
-                                <button className="btn border mb-3 mobile-width">Certificate Upload</button>
-  <Link to="/bibgeneration" className="btn border mb-3 mobile-width">Bib Generation</Link>
-  <button className="btn border mb-3 mobile-width">CRM</button>
+                                <button className="btn btn-primary border mb-3 mobile-width">Certificate Upload</button>
+  <Link to="/bibgeneration" className="btn border btn-primary mb-3 mobile-width">Bib Generation</Link>
+  <button className="btn border mb-3 mobile-width btn-primary">CRM</button>
              </div>
 
 <div>Name: {event?.eventName}</div>
 <div className='mt-2'>Description: {event?.aboutEvent}</div>
-<div className='mt-2'>Categories: {event?.category.map(cat=>{
+<div className='mt-2'>
+
+        <table className='text-center'>
+          <thead>
+            <tr>
+              <td className='p-2'>Category</td>
+              <td className='p-2'>Registration Amount</td>
+            </tr>
+          </thead>
+          {event?.category.map(cat => {
   return (
-    <ul key={cat.id}>
-      <li>
-      {cat.name}
-      </li>
-    </ul>
+    <React.Fragment key={cat.name}>
+      <tbody>
+        <tr>
+          <td>{cat.name}</td>
+          <td>{cat.amount}</td>
+        </tr>
+      </tbody>
+    </React.Fragment>
   )
-})}</div>
+})}
+        </table>
+
+</div>
 </div>
         </>
     )

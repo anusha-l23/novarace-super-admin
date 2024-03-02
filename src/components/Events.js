@@ -24,7 +24,6 @@ console.log(events)
         setIsOpen(!isOpen);
         console.log("clicked")
     };
-    
 
     return (
         <>
@@ -34,7 +33,7 @@ console.log(events)
 
             <Sidebar isOpen={isOpen} handleToggle={handleToggle} />
   
-            <div className="content">
+            <div className="content p-4">
             <div className="row y-gap-20 justify-center items-center">        
             <div className="row y-gap-30">
    

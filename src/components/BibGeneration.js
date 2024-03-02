@@ -23,12 +23,11 @@ const BibGeneration = () => {
 
     </div>
     <div className='text-center'>
-    <button type="submit" className='btn border px-4'>Generate</button>
+    <button type="submit" className='btn btn-primary border px-4'>Generate</button>
     </div>
   </form>
 </div>
 </div>
-
         </>
     )
 }
