@@ -23,7 +23,7 @@ const DashboardHeader = ({handleToggle}) => {
     <div><header className={`header p-4 ${navbar ? "is-sticky" : ""}`}>
     <div className="header__container px-30 sm:px-20">
         <div className='d-flex flex-row justify-content-between align-items-center'>
-            <div className='d-flex flex-row gap-5'>
+        <div class='d-flex flex-row gap-3'>
                 <Link to="/" className="header-logo mr-20">
                     <img src="/img/general/logo-light.svg" alt="logo icon" />
                 </Link>
